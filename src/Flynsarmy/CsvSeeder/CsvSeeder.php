@@ -19,57 +19,57 @@ class CsvSeeder extends Seeder
      *
      * @var string
      */
-    public string $table = '';
+    public $table = '';
 
     /**
      * CSV filename
      *
      * @var string
      */
-    public string $filename = '';
+    public $filename = '';
 
     /**
      * DB connection to use. Leave empty for default connection
      */
-    public string $connection = '';
+    public $connection = '';
 
     /**
      * DB fields to be hashed before import, For example a password field.
      */
-    public array $hashable = ['password'];
+    public $hashable = ['password'];
 
     /**
      * An SQL INSERT query will execute every time this number of rows
      * are read from the CSV. Without this, large INSERTS will silently
      * fail.
      */
-    public int $insert_chunk_size = 50;
+    public $insert_chunk_size = 50;
 
     /**
      * CSV delimiter (defaults to ,)
      */
-    public string $csv_delimiter = ',';
+    public $csv_delimiter = ',';
 
     /**
      * Number of rows to skip at the start of the CSV
      */
-    public int $offset_rows = 0;
+    public $offset_rows = 0;
 
     /**
      * Can be used to tell the import to trim any leading or trailing white space from the column;
      */
-    public bool $should_trim = false;
+    public $should_trim = false;
 
     /**
      * Add created_at and updated_at to rows
      */
-    public bool $timestamps = false;
+    public $timestamps = false;
     /**
      * created_at and updated_at values to be added to each row. Only used if
      * $this->timestamps is true
      */
-    public string $created_at = '';
-    public string $updated_at = '';
+    public $created_at = '';
+    public $updated_at = '';
 
     /**
      * The mapping of CSV to DB column. If not specified manually, the first
@@ -84,7 +84,7 @@ class CsvSeeder extends Seeder
      *   3 => description,
      * )
      */
-    public array $mapping = [];
+    public $mapping = [];
 
 
     /**
